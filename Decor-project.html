@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DeCoR-Dongxiao Yang</title>
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/bottom-bar.css">
+        <link rel="stylesheet" href="styles/side-bar.css">
+        <link rel="stylesheet" href="styles/project-content.css">
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+            });
+        </script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
+    </head>
+    <body>
+        <div class="header">
+            <div class="name-section">
+                <div class="profile-photo-div">
+                    <img class="profile-photo" src="imgs/Dongxiao.jpg">
+                </div>
+                <div class="profile-text">
+                    <p class="name">Dongxiao Yang</p>
+                    <p class="CU">Columbia Univeristy in the City of New York</p>
+                </div>
+            </div>
+            <div class="tab-section">
+                <div class="tab">
+                    <div class="tab-container">
+                        Profile
+                        <a href="DongxiaoYang-profile.html">
+                            <span class="link"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="tab"
+                style="background-color: rgb(218, 218, 218);">
+                        Research & Project
+                        <a href="DongxiaoYang-project.html">
+                            <span class="link"></span>
+                        </a>
+                </div>
+                <div class="tab">
+                    Experience
+                    <a href="DongxiaoYang-experience.html">
+                        <span class="link"></span>
+                    </a>
+                </div>
+                <div class="tab">
+                    CV
+                    <a href="DongxiaoYang-CV.html">
+                        <span class="link"></span>
+                    </a> 
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="side-project-tab">
+                Wrinkle Attentive Fabric Manipulation Metric
+                <a href="Wrinkle-project.html">
+                    <span class="side-link"></span>
+                </a>
+            </div>
+            <div class="side-project-tab" style="background-color: rgb(211, 222, 226); pointer-events: none;">
+                DeCoR: Learning New Sound Features with Delayed Codebook Regularizer
+                <a href="Decor-project.html">
+                    <span class="side-link"></span>
+                </a>
+            </div>
+            <div class="side-project-tab">
+                Bolt Tightening Robot for Power Transmission Tower
+                <a href="Bolt-project.html">
+                    <span class="side-link"></span>
+                </a>
+            </div>
+            <div class="side-project-tab">
+                Design of Robotic Car with Transformable Wheels
+                <a href="Wheel-project.html">
+                    <span class="side-link"></span>
+                </a>
+            </div>
+            <div class="side-project-tab">
+                Research and Deisgn of Unmanned Automatic Logistics Station
+                <a href="uav-project.html">
+                    <span class="side-link"></span>
+                </a>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="title-box"> DeCoR: Learning New Sound Features with Delayed Codebook Regularizer</div>
+            <div class="title-info">
+                <div class="school-icon" >
+                    <img class="icon-img" src="imgs/Columbia.png" alt="">
+                </div>
+                <div class="abs-info">
+                    <div class="info-1">Columbia University, Course Project, ELEN 4810 Digital Signal Processing</div>
+                    <div class="info-2">Sept. 2022 - Dec. 2022</div>
+                </div>
+            </div>
+            <div class="abstract">
+                <div class="subtitle-box">Abstract</div>
+                <div class="abstract-text">
+                    In this work, we incrementally update an audio feature extractor incorporating arrival sounds. 
+                    Naively training the model on new data of new classes results in catastrophic forgetting of the previously learned features. 
+                    To overcome this problem, we present Delayed Codebook Regularizer (DeCoR), a compute- and memory-efficient method to preserve model knowledge on previous data. 
+                    We construct feature codebooks when the model enters a new task and use these early feature codes to regularize afterward training. 
+                    Experiments show that our method improves audio classification accuracy with only a marginal overhead on resources.
+                </div>
+            </div>
+            <div class="overview-img">
+                <div class="img-with-caption">
+                    <img class="image" src="imgs/decor-comparison.pdf" alt="">
+                    <div class="caption">
+                        Comparison of Continual Learning Methods. 
+                        We claim that our DeCoR is more compute and memory efficient than the other three. 
+                        Replay requires extra storage for the audio rehearsal and computation to train on the rehearsal; 
+                        Knowledge distillation requires additional storage for the past model checkpoint and computation to forward the teacher; 
+                        Contrastive learning demands at least two augmentations of the same audio and thus at least twice amount of computation. 
+                        Our DeCoR only stores feature codes and lookups, which are smaller than model checkpoints or unencoded waveforms, and do knowledge distillation from existing codes, which is faster than repeatedly forwarding the model.
+                    </div>
+                </div>
+            </div>
+            <div class="overview-img">
+                <div class="img-with-caption">
+                    <img class="image" src="imgs/decor_thumbnail.pdf" alt="">
+                    <div class="caption">
+                        Alternative Optimization of DeCoR. 
+                        Codebook $\mathcal{C}_t$ is updated at the start of task $\mathcal{T}_t$ by <i>INCREMENT</i>; 
+                        Model $\mathcal{M}_t$ is updated throughout $\mathcal{T}_t$ by <i>DISTILL</i>. 
+                        There is at most one-task delay of the knowledge encoded by the model and the codebook. 
+                        Multiple codebooks and models are drawn in the figure for clarity. 
+                        In reality, only the last codebook and model are used.
+                    </div>
+                </div>
+            </div>
+            <div class="participation">
+                <div class="subtitle-box">My Contribution</div>
+                <div class="contribution-text">
+                    &loz; Collaborated in determining detailed methods of knowledge distillation: e.g proposed evalutating the vector-quantization loss by calculating the $\mathcal{L_2}$ distance between the 
+                    returned feature map and the codebook.
+                </div>
+                <div class="contribution-text">
+                    &loz; Reviewed literature in related topics.
+                </div>
+            </div>
+            <div class="comments">
+                <div class="subtitle-box">Comments</div>
+                <div class="comments-text">
+                    This project was led by a fellow student from the EE department who was super familiar with the topics and took charge of 
+                    most of the workload. Though I did not contribute to the codes, I learned many concepts in continuous learning including 
+                    forgetting, knowledge distaillation, vector-quantized encoder, etc.
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar" style="background-color: white;">
+            <div class="contact-title">Contact:</div>
+            <div class="contact-text">
+                <div>dy2462@columbia.edu</div>
+                <div>+1 (917) 825 4603</div>
+            </div>
+        </div>
+    </body>
+</html>
