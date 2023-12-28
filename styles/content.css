@@ -23,11 +23,33 @@
     opacity: 0.75;
     padding: 30px;
 }
+.news-box{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 450px;
+    left: 60px;
+    width: 400px;
+    background-color: rgb(231, 231, 231);
+    opacity: 0.75;
+    padding: 30px;
+}
 .name-and-pron{
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
+}
+.general-text{
+    padding-top: 20px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(70, 70, 70)
+}
+.general-title{
+    padding-top: 30px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif
 }
 .profile-name{
     font-size: 40px;
