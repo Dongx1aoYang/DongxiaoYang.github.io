@@ -22,7 +22,7 @@
                 </div>
                 <div class="profile-text">
                     <p class="name">Dongxiao Yang</p>
-                    <p class="CU">Columbia Univeristy in the City of New York</p>
+                    <p class="CU">Columbia University in the City of New York</p>
                 </div>
             </div>
             <div class="tab-section">
@@ -37,38 +37,44 @@
                 <div class="tab"
                 style="background-color: rgb(218, 218, 218);">
                         Research & Project
-                        <a href="DongxiaoYang-project.html">
+                        <a href="../DongxiaoYang-project.html">
                             <span class="link"></span>
                         </a>
                 </div>
                 <div class="tab">
                     Experience
-                    <a href="DongxiaoYang-experience.html">
+                    <a href="../DongxiaoYang-experience.html">
                         <span class="link"></span>
                     </a>
                 </div>
                 <div class="tab">
                     CV
-                    <a href="DongxiaoYang-CV.html">
+                    <a href="../DongxiaoYang-CV.html">
                         <span class="link"></span>
                     </a> 
                 </div>
             </div>
         </div>
         <div class="sidebar">
+            <div class="side-project-tab" style="background-color: rgb(211, 222, 226); pointer-events: none;">
+                Object Retrieval from Granular Materials
+                <a href="Sandem-project.html">
+                    <span class="side-link"></span>
+                </a>
+            </div>
             <div class="side-project-tab">
                 Wrinkle Attentive Fabric Manipulation Metric
                 <a href="Wrinkle-project.html">
                     <span class="side-link"></span>
                 </a>
             </div>
-            <div class="side-project-tab">
+            <!-- <div class="side-project-tab">
                 DeCoR: Learning New Sound Features with Delayed Codebook Regularizer
                 <a href="Decor-project.html">
                     <span class="side-link"></span>
                 </a>
-            </div>
-            <div class="side-project-tab"  style="background-color: rgb(211, 222, 226); pointer-events: none;">
+            </div> -->
+            <div class="side-project-tab">
                 Bolt Tightening Robot for Power Transmission Tower
                 <a href="Bolt-project.html">
                     <span class="side-link"></span>
@@ -81,7 +87,7 @@
                 </a>
             </div>
             <div class="side-project-tab">
-                Research and Deisgn of Unmanned Automatic Logistics Station
+                Research and Design of Unmanned Automatic Logistics Station
                 <a href="uav-project.html">
                     <span class="side-link"></span>
                 </a>
@@ -103,7 +109,7 @@
                 <div class="abstract-text">
                     We present object retrieval from granular media exclusively through tactile feedback. 
                     The policy is trained with a Proximal Policy Optimization (PPO) framework in IsaacGym. 
-                    The real world deployment demonstrates a 68% success rate, and can generalize to over 20 unseen objects.  
+                    The real world deployment demonstrates a 68% success rate, and can generalize to over 20 unseen objects. 
                     <!-- <a href="https://www.youtube.com/watch?v=a85h79fnT0w">
                         Video here.
                     </a> -->
@@ -111,15 +117,15 @@
             </div>
             <div class="overview-img" style="justify-content: center;">
                 <div class="img-with-caption">
-                    <img class="image" src="../imgs/sandem_teaser.pdf" alt="" style="height: 400px; border-radius: 20px;">
+                    <img class="image" src="../imgs/sandem_teaser-1.png" alt="" style="height: 400px; border-radius: 20px;">
                     <div class="caption">
                         Robotic object retrieval from granular materials (poly beads here).
                     </div>
                 </div>
             </div>
-            <div class="overview-img">
-                <div class="img-with-caption" style="justify-content: center;">
-                    <img class="image" src="../imgs/policy_pipeline.pdf" alt="" style="height: 250px; border-radius: 20px;">
+            <div class="overview-img" style="justify-content: center;">
+                <div class="img-with-caption">
+                    <img class="image" src="../imgs/policy_pipeline-1.png" alt="" style="height: 250px; border-radius: 20px;">
                     <div class="caption">
                         Our P2G (Push-to-Grasp) policy.
                     </div>
@@ -127,44 +133,47 @@
             </div>
             <div class="overview-img" style="justify-content: center;">
                 <div class="img-with-caption">
-                    <img class="image" src="../imgs/bolt-robot-thumbnail.png" alt="" style="height: 200px; border-radius: 20px;">
+                    <img class="image" src="../imgs/sandem-curriculum.png" alt="" style="height: 250px; border-radius: 20px;">
                     <div class="caption">
-                        Overview of the robot system.
-                        The motion control is based on Raspberry Pi. 
-                        The protocol used to send and receive commands and video is TCP/IP in Python.
+                        The policy is first trained in IsaacGym on a table top without the granular materials, 
+                        and then it is fine-tuned in the granular material environments.
                     </div>
                 </div>
             </div>
             <div class="overview-img" style="justify-content: center;">
                 <div class="img-with-caption">
-                    <img class="image" src="../imgs/bolt-testing.JPG" alt="" style="height: 250px; border-radius: 20px;">
+                    <img class="image" src="../imgs/sandem_demo.gif" alt="" style="height: 400px; border-radius: 20px;">
                     <div class="caption">
-                        Me controlling the robot prototype.
+                        A demo video of successfully grasping an unseen object. The two cylinders on the left are visualizations of the noisy contacts that the tactile sensors
+                        receive, and the plot is the force history information.
                     </div>
                 </div>
             </div>
             <div class="participation">
                 <div class="subtitle-box">My Contribution</div>
                 <div class="contribution-text">
-                    &loz; Led the mechanical design of the entire robot including conceptual design and CAD modeling.
+                    &loz; Integrate the control of UR5 robot and WSG50 robotic gripper and the ROS system of the tactile finger.
                 </div>
                 <div class="contribution-text">
-                    &loz; Finished the entire motion control codes in Python using Raspberry Pi. Remotely controlled the robot with keyboard commands.
+                    &loz; Collaborate in coding the reinforcement learning environment.
                 </div>
                 <div class="contribution-text">
-                    &loz; Collaborated with 4 fellow students to manufacture the prototype and validated it.
+                    &loz; Perform sim-to-real transfer: system identification and domain randomization.
                 </div>
                 <div class="contribution-text">
-                    &loz; First author of the paper (yet to be published).
+                    &loz; Design and evaluate baselines.
+                </div>
+                <div class="contribution-text">
+                    &loz; Co-first author of the manuscript (expected to submit to T-RO on Tactile Robotics in Jan 2024).
                 </div>
             </div>
-            <div class="comments">
+            <!-- <div class="comments">
                 <div class="subtitle-box">Comments</div>
                 <div class="comments-text">
                     This project won the gold award of the 2021 Summer Design Expo of University of Michigan - Shanghai Jiao Tong University Joint Institute (UMJI) (photo below, me in the grey suit).
                 </div>
                 <img src="../imgs/bolt-award.JPG" alt="" style="width: 400px; border-radius: 20px; margin-top: 20px;">
-            </div>
+            </div> -->
         </div>
         <div class="bottom-bar" style="background-color: white;">
             <div class="contact-title">Contact:</div>
