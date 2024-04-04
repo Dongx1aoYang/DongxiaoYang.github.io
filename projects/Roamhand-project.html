@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learning Dexterous Manipulation with a 4-Finger Hand Kinematics-Dongxiao Yang</title>
+        <link rel="stylesheet" href="../styles/general.css">
+        <link rel="stylesheet" href="../styles/header.css">
+        <link rel="stylesheet" href="../styles/bottom-bar.css">
+        <link rel="stylesheet" href="../styles/side-bar.css">
+        <link rel="stylesheet" href="../styles/project-content.css">
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+        <script type="text/javascript"
+            src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="name-section">
+                <div class="profile-photo-div">
+                    <img class="profile-photo" src="../imgs/Dongxiao.jpg">
+                </div>
+                <div class="profile-text">
+                    <p class="name">Dongxiao Yang</p>
+                    <p class="CU">Columbia University in the City of New York</p>
+                </div>
+            </div>
+            <div class="tab-section">
+                <div class="tab">
+                    <div class="tab-container">
+                        Profile
+                        <a href="../index.html">
+                            <span class="link"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="tab"
+                style="background-color: rgb(218, 218, 218);">
+                        Research & Project
+                        <a href="../DongxiaoYang-project.html">
+                            <span class="link"></span>
+                        </a>
+                </div>
+                <div class="tab">
+                    Experience
+                    <a href="../DongxiaoYang-experience.html">
+                        <span class="link"></span>
+                    </a>
+                </div>
+                <div class="tab">
+                    CV
+                    <a href="../DongxiaoYang-CV.html">
+                        <span class="link"></span>
+                    </a> 
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="side-project-tab" style="background-color: rgb(211, 222, 226); pointer-events: none;">
+                Learning Dexterous Manipulation
+                <a href="Roamhand-project.html">
+                    <span class="side-link"></span>
+                </a>
+            </div>
+            <div class="side-project-tab">
+                Object Retrieval from Granular Materials
+                <a href="Sandem-project.html">
+                    <span class="side-link"></span>
+                </a>
+            </div>
+            <div class="side-project-tab">
+                Wrinkle Attentive Fabric Manipulation Metric
+                <a href="Wrinkle-project.html">
+                    <span class="side-link"></span>
+                </a>
+            </div>
+            <div class="side-project-tab">
+                Bolt Tightening Robot for Power Transmission Tower
+                <a href="Bolt-project.html">
+                    <span class="side-link"></span>
+                </a>
+            </div>
+            <div class="side-project-tab">
+                Design of Robotic Car with Transformable Wheels
+                <a href="Wheel-project.html">
+                    <span class="side-link"></span>
+                </a>
+            </div>
+            <div class="side-project-tab">
+                Research and Design of Unmanned Automatic Logistics Station
+                <a href="uav-project.html">
+                    <span class="side-link"></span>
+                </a>
+            </div>
+        </div>
+        <div class="project-content">
+            <div class="title-box"> Learning Dexteours Manipulation with a 4-Digit Hand Kinematics</div>
+            <div class="title-info">
+                <div class="school-icon" >
+                    <img class="icon-img" src="../imgs/Columbia.png" alt="">
+                </div>
+                <div class="abs-info">
+                    <div class="info-1">Columbia University, Robotic Manipulation and Mobility (ROAM) Lab</div>
+                    <div class="info-2">Jan 2024 - Present</div>
+                </div>
+            </div>
+            <div class="abstract">
+                <div class="subtitle-box">Abstract</div>
+                <div class="abstract-text">
+                    Dexterous manipulation has been one of the top research fields in robotics. We have seen incredible work 
+                    on robotic pick-and-place, but most of the related tasks are performed with a parallel gripper or suction
+                    gripper. The low dexterity of such end effectors limit the complexity of the tasks. In order to achieve
+                    general purposes of robotics, dexterous manipulation is essential. In this project, we study the dexterous
+                    manipulations on different tasks with a 4-digit robotic hand kinematics. The tasks include rotating objects
+                    by finger-gaiting, transferring grasping poses from pinching to enveloping, and flipping objects extrinsically
+                    on a tabletop. The goal is to synthesize and optimize the kinematics design to allow general dexterous manipulation.
+                </div>
+            </div>
+            <div class="overview-img" style="justify-content: center;">
+                <div class="img-with-caption">
+                    <img class="image" src="../videos/V1_3_joints_Finger_Gaiting_2.gif" alt="" style="height: 400px; border-radius: 20px;">
+                    <div class="caption">
+                        A 4-digit hand kinematics performing finger-gaiting a cube.
+                    </div>
+                </div>
+            </div>
+            <div class="overview-img" style="justify-content: center;">
+                <div class="img-with-caption">
+                    <img class="image" src="../videos/gt_cuboid.gif" alt="" style="height: 400px; border-radius: 20px;">
+                    <div class="caption">
+                        Grasp transfer of a cuboid from pinch to grasp to power grasp. The reward function is carefully
+                        engineered. We also leverage the contact wrench convex hull volume, a power grasp metric, to encourage
+                        stable grasps. The process may also include finger-gaiting technique to lift up the object, as shown in
+                        the animation above.
+                    </div>
+                </div>
+            </div>
+            <div class="participation">
+                <div class="subtitle-box">My Contribution</div>
+                <div class="contribution-text">
+                    &loz; Individually build the IsaacGym and reinforcement learning environment.
+                </div>
+                <div class="contribution-text">
+                    &loz; Adapt a PPO + Actor-Critic mode and an RRT sampling technique to train the finger-gaiting policy. 
+                </div>
+                <div class="contribution-text">
+                    &loz; Compute and use the volume of the wrench space convex hull as the reward function to train the pinch-to-power grasp transfer.
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar" style="background-color: white;">
+            <div class="contact-title">Contact:</div>
+            <div class="contact-text">
+                <div>dy2462@columbia.edu</div>
+                <div>+1 (917) 825 4603</div>
+            </div>
+        </div>
+    </body>
+</html>
